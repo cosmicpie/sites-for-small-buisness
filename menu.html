@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15110e">
+  <meta name="description" content="Browse all dishes and current menu prices at C3 Restaurant, Ujjain.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Our Menu | C3 Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script><script src="app.js" defer></script>
+</head>
+<body class="menu-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="C3 Restaurant home"><img class="brand-logo" src="assets/c3-logo.png" alt="C3 Restro Pure Veg logo"><span><strong data-brand>C3 Restaurant</strong><small>GOOD FOOD. GOOD COMPANY.</small></span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a class="active" href="menu.html">Menu</a><a href="index.html#about">Our Story</a><a href="index.html#thalis">Thalis</a><a href="index.html#contact">Contact</a></nav>
+    <a class="button button-small button-red header-order" data-whatsapp href="#">Order on WhatsApp <span>↗</span></a>
+  </header>
+  <main class="menu-main">
+    <section class="menu-intro"><p class="eyebrow">C3 RESTAURANT · UJJAIN</p><div class="menu-title-row"><div><h1>Explore the <em>menu.</em></h1><p>Comforting classics, crispy snacks and meals to share. Take your pick.</p></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="menu-search" type="search" placeholder="Search dishes…" autocomplete="off"><kbd>/</kbd></label></div></section>
+    <div id="menu-error" class="notice notice-error" hidden></div>
+    <div id="menu-loading" class="notice">Loading the menu…</div>
+    <section id="menu-browser" hidden>
+      <nav id="category-list" class="category-grid" aria-label="Menu categories"></nav>
+      <div class="menu-content-layout">
+        <section class="menu-results" aria-live="polite">
+          <div class="results-heading"><div><p class="eyebrow" id="section-kicker">A GOOD PLACE TO START</p><h2 id="category-title">Menu</h2></div><div class="veg-tag"><span></span> VEGETARIAN</div></div>
+          <div class="results-meta"><span id="item-count"></span><span>Prices in Indian rupees</span></div>
+          <div id="dish-list" class="dish-grid"></div>
+          <p id="no-results" class="empty-state" hidden>No dishes match that search. Try another name.</p>
+          <p class="menu-footnote">Menu transcribed from the restaurant’s supplied menu photos. A few unclear names and prices are marked for confirmation. Parcel charge: ₹10 per parcel.</p>
+        </section>
+        <aside class="order-panel" id="order-panel">
+          <div class="order-panel-head"><div><p class="eyebrow">YOUR PICKS</p><h2>Your order</h2></div><span class="cart-badge" id="cart-count">0</span></div>
+          <div id="cart-items" class="cart-items"><p class="cart-empty">Add a dish to start your order.</p></div>
+          <div class="cart-total-row"><span>Estimated total</span><strong id="cart-total">₹0</strong></div>
+          <p class="cart-parcel">Parcel charge ₹10 per parcel is extra.</p>
+          <a id="checkout-link" class="button button-red checkout-button" data-whatsapp href="#">Send order on WhatsApp <span>↗</span></a>
+          <p class="cart-confirm">The restaurant will confirm availability and delivery details.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer menu-footer"><a class="brand brand-footer" href="index.html"><img class="brand-logo" src="assets/c3-logo.png" alt="C3 Restro Pure Veg logo"><span><strong data-brand>C3 Restaurant</strong><small>GOOD FOOD. GOOD COMPANY.</small></span></a><div class="footer-note"><span data-address></span><span data-hours></span></div><a class="footer-phone" data-call href="#" data-phone></a></footer>
+</body>
+</html>
